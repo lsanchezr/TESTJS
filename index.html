@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Mogra|Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="estilosindex.css">
+  <title>JS HTML</title>
+</head>
+<body>
+  <div id="contenedor">
+<header>
+  <h2>Mi primer JavaScript</h2>
+  <nav>
+    <ul><!--Este es un fragmento de JS para insertar la fecha actual-->
+      <li class="hoy"  onclick="document.getElementById('demo').innerHTML = Date()"><a href="#">Fecha hoy</a></li>
+      <li><a href="#">Lunes</a></li>
+      <li><a href="#">Martes</a></li>
+      <li><a href="#">Miercoles</a></li>
+      <li><a href="#">Jueves</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <article >
+    <div id="demo"></div>
+    <section>
+      <h2>¿Que podemos hacer con JavaScript?</h2>
+      <p>JavaScript puede modificar atributos html, JavaScript</p>
+      <p>cambia el atributo src (fuente) de una imagen.</p>
+      <center><img id="myImage" src="IMAGENES/pic_bulboff.gif" style="width:100px"></center>
+      <button class="boton1" type="button" name="prendeFoco" id="prendeFoco" onclick="document.getElementById('myImage').src='IMAGENES/pic_bulbon.gif'">Encender</button>
+      <button class="boton2" type="button" name="apagaFoco" id="apagaFoco" onclick="document.getElementById('myImage').src='IMAGENES/pic_bulboff.gif'">Apagar</button>
+    </section>
+  </article>
+  <aside>
+    <h2>Esta seccion sera mi publicidad</h2>
+  </aside>
+</main>
+<footer>
+  <h3>Liliana Sánchez Romero</h3>
+</footer>
+</div>
+</body>
+<script>
+  console.log("Hola lili");
+</script>
+</html>

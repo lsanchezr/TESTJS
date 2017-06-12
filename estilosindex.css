@@ -60,7 +60,7 @@ main{
   margin-right: 10px;
 }
 main article{
-  width: 900px;
+  width: 78%;
   height: 500px;
   border: solid 1px pink;
   border-radius: 0px 24px 0px 24px;
@@ -107,7 +107,7 @@ main article section p{
   font-family: 'Pacifico', cursive;
 }
 main aside{
-  width: 300px;
+  width: 20%;
   height: 500px;
   border: solid 1px purple;
   border-radius: 0px 24px 0px 24px;

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimun-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Lobster|Mogra|Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Mogra|Pacifico|Roboto+Slab" rel="stylesheet">
   <link rel="stylesheet" href="estilosindex.css">
   <title>JS HTML</title>
 </head>
@@ -33,6 +33,18 @@
       <center><img id="myImage" src="IMAGENES/pic_bulboff.gif" style="width:100px"></center>
       <button class="boton1" type="button" name="prendeFoco" id="prendeFoco" onclick="document.getElementById('myImage').src='IMAGENES/pic_bulbon.gif'">Encender</button>
       <button class="boton2" type="button" name="apagaFoco" id="apagaFoco" onclick="document.getElementById('myImage').src='IMAGENES/pic_bulboff.gif'">Apagar</button>
+      <br>
+      <br>
+      <br>
+      <br>
+    </section>
+    <section>
+      <div id="row">
+        <hr>
+        <button class="boton3" type="button" name="button" onclick="myFunction()">Saludo</button>
+        <p id="texto">Hola</p>
+        </hr>
+      </div>
     </section>
   </article>
   <aside>
@@ -45,6 +57,24 @@
 </div>
 </body>
 <script>
-  console.log("Hola lili");
-</script>
+  console.log("lili");
+  function myFunction() { //Este es el nombre de mi funcion
+/*Aqui declaramos una variable llamada txt1 la cual va al documento y obtiene lo que contenga el id que sea igual a texto y entrara en la condicion*/
+  var txt1= document.getElementById("texto").innerHTML;
+    if (txt1=='Hola' || txt1=="hola") {//si txt1 es igual a Hola
+      txt1='Adios';//txt1 ahora vale Adios
+      console.log("1");//Para saber en que momento esta ejecutandose
+    }else if (txt1=='Adios' || txt1=="adios") {
+      //si no entonces si txt1 es igual a Adios
+      txt1='Hola';
+      console.log("2");
+    }else{//y si no entra en ninguna de las 2 entonces mostrara este mensaje
+      txt1='ninguna de las anteriores';
+      console.log("4");
+    }
+/*viene al document en este caso paragraph y obtiene el elemento id texto y coloca el valor que contenga la variable txt1*/
+    document.getElementById('texto').innerHTML =txt1;
+    console.log("3");
+    }
+  </script>
 </html>

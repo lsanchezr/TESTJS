@@ -88,8 +88,8 @@ main article section p{
   border-radius: 0px 24px 0px 24px;
   -moz-border-radius: 0px 24px 0px 24px;
   -webkit-border-radius: 0px 24px 0px 24px;
-  border: solid 1px  rgba(233,30,99,0.9);
-  background-color: rgba(233,30,99,0.9);
+  border: solid 1px  rgba(250, 3, 254,1);
+  background-color: rgba(250, 3, 254  ,0.3);
   float: left;
   padding:15px;
   margin-left: 35%;
@@ -99,12 +99,35 @@ main article section p{
   border-radius: 0px 24px 0px 24px;
   -moz-border-radius: 0px 24px 0px 24px;
   -webkit-border-radius: 0px 24px 0px 24px;
-  border: solid 1px  rgba(156, 39, 176,0.9);
-  background-color: rgba(156, 39, 176,0.9);
+  border: solid 1px  rgba(254, 3, 113, 1);
+  background-color: rgba(254, 3, 113  ,0.3);
   float: left;
   padding:15px;
   margin-left: 10%;
   font-family: 'Pacifico', cursive;
+}
+article section div hr{
+    border-style:dashed;
+    border-color: aqua;
+}
+.boton3{
+  border-radius: 22px 0px 22px 0px;
+  -moz-border-radius: 22px 0px 22px 0px;
+  -webkit-border-radius: 22px 0px 22px 0px;
+  border: solid 1px  lime;
+  background-color: rgba(0, 255, 0, 0.5);
+  float: left;
+  padding:15px;
+  margin-left: 35%;
+  margin-top: 4px;
+  font-family: 'Pacifico', cursive;
+}
+p#texto{
+  margin-right: 28%;
+  font-size: 35px;
+  text-align: center;
+  line-height: 50px;
+  font-family: 'Roboto Slab', serif;
 }
 main aside{
   width: 20%;

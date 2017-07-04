@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <title>Ecma</title>
+  <style media="screen">
+  *{
+    margin: 0; padding: 0;
+  }
+  .container{
+    margin: 10px;
+    padding: 10px;
+  }
+  .header h1{
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color: aqua;
+  }
+  .main{
+    /*background-color: lightblue;*/
+  }
+  .main ul{
+    padding-left:30px;
+  }
+  .main ul li{
+    padding:5px;
+  }
+  .ecma h2{
+    padding: 10px;
+    color: rgba(166, 254, 2, 0.98);
+  }
+  p#oa{
+    padding: 5px;
+    color: purple;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Ejemplos con EcmaScript.</h1>
+    </div>
+
+  <div class="main">
+    <section>
+      <div class="ecma">
+      <h2>JavaScript Statements</h2>
+
+      <div id="ej1"><p>En HTML, JavaScript declaraciones son: <em>"instrucciones"</em> a ser <em>"ejecutados"</em> por el navegador web.</p>
+      <p id="d1"></p>
+      <p id="d2"></p>
+      </div>
+
+      <div id="ej2">
+        <p>Variables:es <em>"un espacio con nombre en la memoria"</em> que almacena valores de un programa, también se les llama identificadores.</p>
+        <p>Reglas de nomenclatura para un identificador:</p>
+        <ul>
+          <li>Los identificadores no pueden ser palabras clave.</li>
+          <li>Los identificadores pueden contener alfabetos y números.</li>
+          <li>Los identificadores no pueden contener espacios o caracteres especiales, excepto el guión bajo (_) y el signo del dólar ($).</li>
+          <li>Los nombres de variable no pueden comenzar con un número.</li>
+        </ul>
+        <p id="v1"></p>
+        <p id="v2"></p>
+      </div>
+
+      <div id="ej3">
+        <h2>Operators en JavaScript.</h2>
+        <p>Los operadores en JavaScript se utilizan para asignar valores, comparar valores, realizar operaciones y mucho más.</p>
+        <p>Tipos de Operadores: </p>
+        <ul>
+          <li>Operadores Aritméticos.</li>
+          <li>Operadores Lógicos.</li>
+          <li>Operadores Relacionales.</li>
+          <li>Operador Bit a Bit.</li>
+          <li>Operadores de Asignación.</li>
+          <li>Operadores Condiconales.</li>
+          <li>Operadores String.</li>
+        </ul>
+        <p id="oa">Operadores Aritmeticos:</p>
+        Suma: <input type="text" name="" value="" id="suma"> <br><br>
+        Resta: <input type="text" name="" value="" id="resta"> <br><br>
+        Multiplicación: <input type="text" name="" value="" id="multi"> <br><br>
+        División: <input type="text" name="" value="" id="div"> <br><br>
+      </div>
+    </div>
+    </section>
+  </div>
+</div>
+</body>
+<script>
+//Ejercicios del libro EcmaScript
+//Declaración ejecutada por el navegador donde encuentre el id indicado
+    console.log("Bienvenidos a EcmaScript"); //declaración de consola
+    document.getElementById('d1').innerHTML="Aprendiendo declaraciones";
+    document.getElementById('d2').innerHTML=" con JavaScript";
+
+//Declaramos una variable y la imprimimos en el documento HTML
+    var name='Declarando variables.';
+    document.getElementById('v1').innerHTML=name;
+
+    var x = 4;
+    var y = 6;
+    var z = x + y;
+    document.getElementById("v2").innerHTML ='El valor de x es: '+ x +' El valor de y es: '+ y +' y la suma de las dos es: ' + z + '.';
+
+//Operadores Aritmeticos
+//Operador suma
+    var x = 5;
+    var y = 2;
+    var z = x + y;
+    document.getElementById("suma").value = z;
+//Operador resta
+    var x = 5;
+    var y = 2;
+    var z = x - y;
+    document.getElementById("resta").value = z;
+//Operador resta
+    var x = 5;
+    var y = 2;
+    var z = x * y;
+    document.getElementById("multi").value = z;
+//Operador resta
+    var x = 5;
+    var y = 2;
+    var z = x / y;
+    document.getElementById("div").value = z;
+</script>
+</html>

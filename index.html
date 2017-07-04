@@ -2,79 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimun-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Lobster|Mogra|Pacifico|Roboto+Slab" rel="stylesheet">
-  <link rel="stylesheet" href="estilosindex.css">
-  <title>JS HTML</title>
+  <link href="https://fonts.googleapis.com/css?family=Mogra|Lobster|Courgette" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Mio</title>
 </head>
 <body>
   <div id="contenedor">
-<header>
-  <h2>Mi primer JavaScript</h2>
-  <nav>
-    <ul><!--Este es un fragmento de JS para insertar la fecha actual-->
-      <li class="hoy"  onclick="document.getElementById('demo').innerHTML = Date()"><a href="#">Fecha hoy</a></li>
-      <li><a href="#">Lunes</a></li>
-      <li><a href="#">Martes</a></li>
-      <li><a href="#">Miercoles</a></li>
-      <li><a href="#">Jueves</a></li>
-    </ul>
-  </nav>
-</header>
-<main>
-  <article >
-    <div id="demo"></div>
-    <section>
-      <h2>¿Que podemos hacer con JavaScript?</h2>
-      <p>JavaScript puede modificar atributos html, JavaScript</p>
-      <p>cambia el atributo src (fuente) de una imagen.</p>
-      <center><img id="myImage" src="IMAGENES/pic_bulboff.gif" style="width:100px"></center>
-      <button class="boton1" type="button" name="prendeFoco" id="prendeFoco" onclick="document.getElementById('myImage').src='IMAGENES/pic_bulbon.gif'">Encender</button>
-      <button class="boton2" type="button" name="apagaFoco" id="apagaFoco" onclick="document.getElementById('myImage').src='IMAGENES/pic_bulboff.gif'">Apagar</button>
-      <br>
-      <br>
-      <br>
-      <br>
-    </section>
-    <section>
-      <div id="row">
-        <hr>
-        <button class="boton3" type="button" name="button" onclick="myFunction()">Saludo</button>
-        <p id="texto">Hola</p>
-        </hr>
-      </div>
-    </section>
-  </article>
-  <aside>
-    <h2>Esta seccion sera mi publicidad</h2>
-  </aside>
-</main>
-<footer>
-  <h3>Liliana Sánchez Romero</h3>
-</footer>
-</div>
+    <header>
+      <h1>Mi primer JavaScript</h1>
+      <nav>
+        <ul>
+          <li class="hoy" onclick="document.getElementById('demo').innerHTML= Date()"><a href="#">Fecha hoy</a></li>
+          <li><a href="indexecma.html">EcmaScript</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Imagenes</a></li>
+        </ul>
+      </nav>
+    </header>
+      <main>
+        <article>
+          <div id="demo"></div>
+        </article>
+        <section class="ejercicio1">
+          <h2>¿Qué podemos hacer con JavaScript?</h2>
+          <p>JavaScript púede modificar atributos html, JavaScript</p>
+          <p>cambia el atributo src (fuente) de una imagen.</p>
+          <center><img id="myImage" src="imagenes/pic_bulboff.gif" style="width:100px"></center>
+
+          <div class="foco">
+            <button class="b1" type="button" name="prendeFoco" id="prendeFoco"
+            onclick="document.getElementById('myImage').src='imagenes/pic_bulbon.gif'">Encender</button>
+            <button class="b2" type="button" name="apagaFoco" id="apagaFoco"
+            onclick="document.getElementById('myImage').src='imagenes/pic_bulboff.gif'">Apagar</button>
+          </div>
+
+          <section class="ejercicio2">
+              <div class="saludo">
+                <hr>
+                <button class="b3" type="button" name="button" onclick="myFunction()">Saludo</button>
+                <p id='texto'>hola</p>
+                </hr>
+              </div>
+          </section>
+          <!-- <section class="ejercicio3">
+              <div class="cuadrado" id="cuadrado">Soy un cuadrado</div>
+              <div class="triangulo"></div>
+              <button type="button" name="button" id="square">Cuadrado</button>
+          </section> -->
+
+          <section>
+          <div class="ecma">
+            <h1>Ejemplos con EcmaScript</h1>
+            <h2>JavaScript Statements</h2>
+
+            <div id="ej1"><p>En HTML, JavaScript declaraciones son: <em>"instrucciones"</em> a ser <em>"ejecutados"</em> por el navegador web.</p>
+            <p id="d1"></p>
+            <p id="d2"></p>
+            </div>
+
+            <div id="ej2">
+              <p>Variables:es <em>"un espacio con nombre en la memoria"</em> que almacena valores de un programa, también se les llama identificadores</p>
+            </div>
+
+          </div>
+          </section>
+        </section>
+
+        <aside>Aside</aside>
+      </main>
+      <footer>Liliana Sánchez Romero</footer>
+  </div>
 </body>
+
 <script>
-  console.log("lili");
-  function myFunction() { //Este es el nombre de mi funcion
-/*Aqui declaramos una variable llamada txt1 la cual va al documento y obtiene lo que contenga el id que sea igual a texto y entrara en la condicion*/
-  var txt1= document.getElementById("texto").innerHTML;
-    if (txt1=='Hola' || txt1=="hola") {//si txt1 es igual a Hola
-      txt1='Adios';//txt1 ahora vale Adios
-      console.log("1");//Para saber en que momento esta ejecutandose
-    }else if (txt1=='Adios' || txt1=="adios") {
-      //si no entonces si txt1 es igual a Adios
-      txt1='Hola';
-      console.log("2");
-    }else{//y si no entra en ninguna de las 2 entonces mostrara este mensaje
-      txt1='ninguna de las anteriores';
-      console.log("4");
+  console.log('Realizado por: Liliana Sánchez');
+  var txt = document.getElementById('texto').innerHTML;
+  function myFunction(){
+    if(txt == 'Hola' || txt == 'hola'){
+      txt = 'Adios';
+    }else if (txt == 'Adios' || txt == 'adios') {
+      txt = 'Hola';
     }
-/*viene al document en este caso paragraph y obtiene el elemento id texto y coloca el valor que contenga la variable txt1*/
-    document.getElementById('texto').innerHTML =txt1;
-    console.log("3");
-    }
-  </script>
+    document.getElementById('texto').innerHTML=txt;
+  }
+
+//Ejercicios del libro EcmaScript
+//Declaración ejecutada por el navegador donde encuentre el id indicado
+    console.log("Bienvenidos a EcmaScript"); //declaración de consola
+    document.getElementById('d1').innerHTML="Aprendiendo declaraciones";
+    document.getElementById('d2').innerHTML=" con JavaScript";
+
+
+
+</script>
 </html>

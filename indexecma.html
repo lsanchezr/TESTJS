@@ -37,6 +37,9 @@
     padding: 5px;
     color: purple;
   }
+  table#t1{
+    border-style: double;
+  }
   </style>
 </head>
 <body>
@@ -71,30 +74,164 @@
       <div id="ej3">
         <h2>Operators en JavaScript.</h2>
         <p>Los operadores en JavaScript se utilizan para asignar valores, comparar valores, realizar operaciones y mucho más.</p>
-        <p>Tipos de Operadores: </p>
+        <p id="ej4">Tipos de Operadores: </p>
         <ul>
           <li>Operadores Aritméticos.</li>
-          <li>Operadores Lógicos.</li>
-          <li>Operadores Relacionales.</li>
-          <li>Operador Bit a Bit.</li>
           <li>Operadores de Asignación.</li>
-          <li>Operadores Condiconales.</li>
-          <li>Operadores String.</li>
         </ul>
         <p id="oa">Operadores Aritmeticos:</p>
+        <div id="Suma">
+          <p id="s">Adición (+): Devuelve la suma de los operandos.</p>
+          <input type="text" id="c1">+
+          <input type="text" id="c2">=
+          <input type="text" id="c3">
+          <button type="button" name="button" onclick="functionName()">Suma</button>
+          <br>
+        </div>
+        <br>
         Suma: <input type="text" name="" value="" id="suma"> <br><br>
+
+        <p id="r">Resta (-): Devuelve la diferencia de los valores.</p>
         Resta: <input type="text" name="" value="" id="resta"> <br><br>
-        Multiplicación: <input type="text" name="" value="" id="multi"> <br><br>
+
+        <p id="m">Multiplicación (*): Devuelve el producto de los valores.</p>
+        Multiplicación: <input type="text" name="" value="" id="multi"><br><br>
+
+        <p id="d">División (/): Realiza una operación de división y devuelve el cociente.</p>
         División: <input type="text" name="" value="" id="div"> <br><br>
+
+        <p id="mo">Módulo (%): Realiza una división y devuelve el resto.</p>
+        Modulo: <input type="text" name="" value="" id="mod"> <br><br>
+
+        <p id="in">Incremento (++): Incrementa el valor de la variable por uno</p>
+        Incremento: <input type="text" name="" value="" id="inc"> <br><br>
+
+        <p id="de">Decremento (--): Decrementa el valor de la variable por uno</p>
+        Decremento: <input type="text" name="" value="" id="dec"> <br><br>
+      </div>
+
+      <div id="ej5">
+        <p>Operadores de Asignación.</p><br>
+        <table id="t1">
+          <tr>
+            <td>Asignación Simple (=):</td>
+            <td>Asigna valores desde el operando del lado derecho al operando del lado izquierdo.</td>
+          </tr>
+          <tr>
+            <td>Agregar y Asignar (+=):</td>
+            <td>Agrega el operando derecho al operando izquierdo y asigna el resultado al Operando izquierdo.</td>
+          </tr>
+          <tr>
+            <td>Restar y Asignar (-=):</td>
+            <td>Sustrae el operando derecho del operando izquierdo y asigna el resultado al operando izquierdo.</td>
+          </tr>
+          <tr>
+            <td>Multiplicar y Asignar (*=):</td>
+            <td>Multiplica el operando derecho con el operando izquierdo y asigna el resultado al operando izquierdo.</td>
+          </tr>
+          <tr>
+            <td>Divide y Asigna (/=):</td>
+            <td>Divide el operando izquierdo con el operando derecho y asigna el resultado al operando izquierdo.</td>
+          </tr>
+          <tr>
+            <td>Asignación Restante (%=):</td>
+            <td>Divide una variable por el valor del operando derecho y asigna el resto a la variable</td>
+          </tr>
+          <tr>
+            <td>Asignación de Exponencia (**=):</td>
+            <td>Asigna el resultado de elevar el primer operando al segundo operando de potencia.</td>
+          </tr>
+          <tr>
+            <td>Asignación Izq (<<=):</td>
+            <td>Mueve la cantidad especificada de bits a la izquierda y asigna el resultado a la variable. </td>
+          </tr>
+          <tr>
+            <td>Asignación Der (>>=):</td>
+            <td>Mueve la cantidad especificada de bits a la derecha y asigna el resultado a la variable.</td>
+          </tr>
+          <tr>
+            <td>Asignación Der no Firmada (>>>=):</td>
+            <td>Mueve la cantidad especificada de bits a la derecha y asigna el resultado a la variable.</td>
+          </tr>
+          <tr>
+            <td>Asignación AND bit a bit (&=):</td>
+            <td>Utiliza la representación binaria de ambos operandos, realiza una operación AND bit a bit en ellos y asigna el resultado a la variable</td>
+          </tr>
+          <tr>
+            <td>Asignación XOR bit a bit (^=):</td>
+            <td>Utiliza la representación binaria de ambos operandos, realiza una operación XOR bit a bit en ellos y asigna el resultado a la variable.</td>
+          </tr>
+          <tr>
+            <td>Asignación OR bit a bit (|=):</td>
+            <td>Utiliza la representación binaria de ambos operandos, realiza una operación bit a bit en ellos y asigna el resultado a la variable. </td>
+          </tr>
+        </table><br>
+        Asignación Simple: <input type="text" id="as1"><br><br>
+        Agregar y Asignar: <input type="text" id="as2"><br><br>
+        Restar y Asignar: <input type="text" id="as3"><br><br>
+        Multiplica y Asignar: <input type="text" id="as4"><br><br>
+        Divide y Asignar: <input type="text" id="as5"><br><br>
+        Asignación Restante: <input type="text" id="as6"><br><br>
+        Asignación Exponencial: <input type="text" id="as7"><br><br>
+        Asignación Izq: <input type="text" id="as8"><br><br>
+        Asignación Der: <input type="text" id="as9"><br><br>
+        Asignación Der no Firmada: <input type="text" id="as10"><br><br>
+        Asignación AND: <input type="text" id="as11"><br><br>
+        Asignación XOR: <input type="text" id="as12"><br><br>
+        Asignación OR: <input type="text" id="as13"><br><br>
+      </div>
+
+      <!-- <div id="ej6"> TERMINAR TIPOS DE DATOS
+        <h2>Tipos de Datos.</h2>
+        <p>Son operadores unarios. Este operador devuelve el tipo de datos del operando.</p>
+        <p id="td"></p>
+      </div> -->
+
+      <div id="ej7">
+        <h2>Funciones en JavaScript.</h2>
+        <p id="fu">Las funciones son los bloques de construcción de código legible, mantenible y reutilizable. Las funciones se definen mediante la palabra clave <strong><em>Function</em></strong>. Sintaxis para definir una función estándar.</p>
+        <div id="Sf">
+        <p><br>
+          Function function_name(){
+          <p>Cuerpo de la Función.</p>
+        } <br> function_name();
+        </p>
+      </div><br>
+        <p>Sintaxis para una Función con Parametros.</p>
+        <div id="Pf">
+        <p><br>
+          Function function_name(param1, param2, ..., paramN){
+          <p>Cuerpo de la Función.</p>
+        } <br> function_name();
+        </p>
+      </div>
+      <br>
+      <p>Ejemplo de una Función Simple:</p>
+      <p id="fs"></p><br>
+      <button type="button" name="button" onclick="FSimple()">Función Simple</button>
+      <br><br>
+      suma simple: <input type="text" id="sum"><br><br>
+      Suma con una función parametrizada: <input type="text" id="fp">
+      </div>
+
+      <!-- <div id="ej75">
+          termina ejemplo 7.5
+      </div> -->
+
+      <div id="ej8">
+        <h2>Scope en JavaScript.</h2>
+        <p>En JavaScript, <strong><em>SCOPE</em></strong> es el conjunto de variables, objetos y funciones a las que tiene acceso. <strong><em>SCOPE</em></strong> es el alcance que tiene a la función.</p>
       </div>
     </div>
     </section>
   </div>
 </div>
+
 </body>
 <script>
 //Ejercicios del libro EcmaScript
 //Declaración ejecutada por el navegador donde encuentre el id indicado
+
     console.log("Bienvenidos a EcmaScript"); //declaración de consola
     document.getElementById('d1').innerHTML="Aprendiendo declaraciones";
     document.getElementById('d2').innerHTML=" con JavaScript";
@@ -108,8 +245,15 @@
     var z = x + y;
     document.getElementById("v2").innerHTML ='El valor de x es: '+ x +' El valor de y es: '+ y +' y la suma de las dos es: ' + z + '.';
 
-//Operadores Aritmeticos
+//Operadores Aritméticos
 //Operador suma
+function functionName() {
+  var c1=document.getElementById('c1').value;
+  var c2=document.getElementById('c2').value;
+  var c3= parseInt(c1)+parseInt(c2);
+  document.getElementById('c3').value=c3;
+  return c3;
+}
     var x = 5;
     var y = 2;
     var z = x + y;
@@ -119,15 +263,120 @@
     var y = 2;
     var z = x - y;
     document.getElementById("resta").value = z;
-//Operador resta
+//Operador multiplicación
     var x = 5;
     var y = 2;
     var z = x * y;
     document.getElementById("multi").value = z;
-//Operador resta
+//Operador división
     var x = 5;
     var y = 2;
     var z = x / y;
     document.getElementById("div").value = z;
+//Operador modulo
+    var n1=10;
+    var n2=3;
+    var r= n1 % n2;
+    document.getElementById('mod').value= r;
+//Operador incremento
+    var c=3;
+    c++
+    document.getElementById('inc').value= c;
+//Operador decremento
+    var a=3;
+    a--
+    document.getElementById('dec').value= a;
+//Operadores Asignación
+//Operador de Asignación Simple
+    var a = 5
+    var b = 10
+    var c = 25
+        c = a;
+    document.getElementById('as1').value=c;
+//operador de adcción
+    var a = 15;
+    var b = 10;
+    b += a;
+    document.getElementById('as2').value=b;
+//operador de resta
+    var a = 15;
+    var b = 10;
+    b -= a;
+    document.getElementById('as3').value=b;
+//operador de multiplica
+    var a = 15;
+    var b = 10;
+    b *= a;
+    document.getElementById('as4').value=b;
+//operador de divide
+    var a = 15;
+    var b = 10;
+    b /= a;
+    document.getElementById('as5').value=b;
+//operador restante
+    var a = 15;
+    var b = 10;
+    b %= a;
+    document.getElementById('as6').value=b;
+//operador exponencia
+    var a = 2;
+    var b = 10;
+    b **= a;
+    document.getElementById('as7').value=b;
+//operador asigna izq
+    var a = 5;
+    var b = 1;
+    b <<= a;
+    document.getElementById('as8').value=b;
+//operador asigna der
+    var a = 15;
+    var b = 10;
+    b >>= a;
+    document.getElementById('as9').value=b;
+//operador asigna der no firmada
+    var a = 5;
+    var b = 1;
+    b >>>= a;
+    document.getElementById('as10').value=b;
+//operador and
+    var a = 5;
+    var b = 1;
+    b &= a;
+    document.getElementById('as11').value=b;
+//operador asigna xor
+    var a = 5;
+    var b = 1;
+    b ^= a;
+    document.getElementById('as12').value=b;
+//operador asigna or
+    var a = 5;
+    var b = 1;
+    b |= a;
+    document.getElementById('as13').value=b;
+
+//Tipos de datos
+
+//Función Simple 7.2
+    function FSimple() {
+    var a="Una Función es un conjunto de sentencias que realiza una tarea o calcula un valor.";
+    document.getElementById("fs").innerHTML = a;
+    }
+//Función simple con una suma 7.3
+    function suma(){//Inicia la función
+      var e = 2;
+      var d = 7;
+      var w = e + d;
+    document.getElementById("sum").value = w;
+}//Termina la función
+suma();//Mandamos llamar a la función
+
+//Función con parametros retornando el resultado 7.4
+    function FParametros(a,b){
+      return a + b;
+    }
+    document.getElementById('fp').value=FParametros(4,3);
+
+
+invoca();
 </script>
 </html>

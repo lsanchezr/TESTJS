@@ -13,12 +13,13 @@
   .container{
     margin: 10px;
     padding: 10px;
+    background-color: #CEF6F5;
   }
   .header h1{
     text-align: center;
     font-family: 'Lobster', cursive;
     font-size: 50px;
-    color: aqua;
+    color: #FF0080;
   }
   .main{
     /*background-color: lightblue;*/
@@ -31,15 +32,16 @@
   }
   .ecma h2{
     padding: 10px;
-    color: rgba(166, 254, 2, 0.98);
+    color: rgba(9, 30, 240  , 1);
   }
-  p#oa{
+  /*p#oa{
     padding: 5px;
     color: purple;
-  }
+  }*/
   table#t1{
     border-style: double;
   }
+
   </style>
 </head>
 <body>
@@ -51,7 +53,7 @@
   <div class="main">
     <section>
       <div class="ecma">
-      <h2>JavaScript Statements</h2>
+      <h2>JavaScript Declaraciones.</h2>
 
       <div id="ej1"><p>En HTML, JavaScript declaraciones son: <em>"instrucciones"</em> a ser <em>"ejecutados"</em> por el navegador web.</p>
       <p id="d1"></p>
@@ -72,21 +74,22 @@
       </div>
 
       <div id="ej3">
-        <h2>Operators en JavaScript.</h2>
+        <h2>Operadores en JavaScript.</h2>
         <p>Los operadores en JavaScript se utilizan para asignar valores, comparar valores, realizar operaciones y mucho más.</p>
         <p id="ej4">Tipos de Operadores: </p>
         <ul>
           <li>Operadores Aritméticos.</li>
           <li>Operadores de Asignación.</li>
         </ul>
-        <p id="oa">Operadores Aritmeticos:</p>
-        <div id="Suma">
+        <h2>Operadores Aritméticos:</h2>
+        <div id="Operaciones">
+          <p>Ejemplos:</p><br>
           <p id="s">Adición (+): Devuelve la suma de los operandos.</p>
-          <input type="text" id="c1">+
-          <input type="text" id="c2">=
-          <input type="text" id="c3">
-          <button type="button" name="button" onclick="functionName()">Suma</button>
           <br>
+          <input type="text" id="sumando"> +
+          <input type="text" id="sumador"> =
+          <input type="text" id="resultado">
+          <button type="button" name="button" onclick="opesuma()">Sumar</button>
         </div>
         <br>
         Suma: <input type="text" name="" value="" id="suma"> <br><br>
@@ -111,7 +114,7 @@
       </div>
 
       <div id="ej5">
-        <p>Operadores de Asignación.</p><br>
+        <h2>Operadores de Asignación.</h2><br>
         <table id="t1">
           <tr>
             <td>Asignación Simple (=):</td>
@@ -181,11 +184,13 @@
         Asignación OR: <input type="text" id="as13"><br><br>
       </div>
 
-      <!-- <div id="ej6"> TERMINAR TIPOS DE DATOS
-        <h2>Tipos de Datos.</h2>
-        <p>Son operadores unarios. Este operador devuelve el tipo de datos del operando.</p>
-        <p id="td"></p>
-      </div> -->
+      <div id="ej6">
+        <h2>TIPOS DE DATOS.</h2>
+        <p>Operador Typeof: Es un operador unario, este operador devuelve el tipo de datos del operando.</p>
+        <p>Ejemplo: </p>
+        <p>var num=12;</p><input type="text" id="tdnum">
+        <p>var cad="Hola";</p><input type="text" id="tdcad">
+      </div>
 
       <div id="ej7">
         <h2>Funciones en JavaScript.</h2>
@@ -214,13 +219,46 @@
       Suma con una función parametrizada: <input type="text" id="fp">
       </div>
 
-      <!-- <div id="ej75">
-          termina ejemplo 7.5
+      <!-- <div id="b1" onload="loadImage()">
+            <img src="js.png">
       </div> -->
 
       <div id="ej8">
         <h2>Scope en JavaScript.</h2>
-        <p>En JavaScript, <strong><em>SCOPE</em></strong> es el conjunto de variables, objetos y funciones a las que tiene acceso. <strong><em>SCOPE</em></strong> es el alcance que tiene a la función.</p>
+        <p>En JavaScript, <strong><em>SCOPE</em></strong> es el conjunto de variables <strong><em>Gobales</em></strong> y <strong><em>Locales</em></strong>, asignadas en objetos y funciones a las que tiene acceso. <strong><em>SCOPE</em></strong> es el alcance que tiene a la función.</p>
+        <ul>
+          <li>Global Scope: Se puede acceder a una variable con alcance global desde cualquier parte del código JavaScript.</li>
+          <li>Local Scope: Se puede acceder a una variable con un ámbito local desde dentro de una función donde se declara.</li>
+          <li>Let Scope: La palabra clave let permite que el script restrinja el acceso a la variable al bloque de inclusión más cercano.</li>
+        </ul><br>
+        <p id="sco"></p><br>
+        <p id="scg"></p>
+        <p id="scl"></p>
+      </div>
+      <div id="ej9">
+        <h2>Objetos en EcmaScript.</h2>
+        <p>Un objeto es una instancia que contiene un conjunto de pares de valores clave. Los objetos pueden representar valores múltiples o complejos. Los valores pueden ser escalares o funciones, incluso matriz de otros objetos.</p>
+        <p>Caracteristicas de los Objetos en JavaScript:</p>
+        <ul>
+          <li>El contenido de un objeto se denomina propiedades.</li>
+          <li>Las propiedades consisten en un nombre (clave) y un valor.</li>
+          <li>Los nombres de propiedades deben ser cadenas o símbolos.</li>
+          <li>Los Objetos son sensibles a mayúsculas y minúsculas.</li>
+          <li>Se accede a un objeto con una simple notación de (:).</li>
+        </ul>
+        <p>Operador 'delete': Elimina una propiedad de un objeto.</p>
+        <p>Método Object.assign ():Copiar los valores de todas las propiedades propias enumerables de uno o más objetos de origen a un objeto de destino.</p>
+        <p>Object.create ():Permite crear objetos sin tener que definir una función constructora.</p><br>
+        <p>Ejemplos: </p>
+        <p id="ob"></p>
+        <p id="obc"></p>
+        <p id="oeli"></p>
+      </div>
+
+      <div id="ej10">
+        <h2>Arreglos en JavaScript.</h2>
+        <p>Ejemplo de un Array con Objeto. </p>
+        <p id="arreglo"></p>
       </div>
     </div>
     </section>
@@ -246,14 +284,15 @@
     document.getElementById("v2").innerHTML ='El valor de x es: '+ x +' El valor de y es: '+ y +' y la suma de las dos es: ' + z + '.';
 
 //Operadores Aritméticos
-//Operador suma
-function functionName() {
-  var c1=document.getElementById('c1').value;
-  var c2=document.getElementById('c2').value;
-  var c3= parseInt(c1)+parseInt(c2);
-  document.getElementById('c3').value=c3;
-  return c3;
+
+function opesuma(){
+m1 = document.getElementById("sumando").value;
+m2 = document.getElementById("sumador").value;
+r = parseInt(m1)+parseInt(m2);
+document.getElementById("resultado").value = r;
+return r;
 }
+//Operador suma
     var x = 5;
     var y = 2;
     var z = x + y;
@@ -375,8 +414,80 @@ suma();//Mandamos llamar a la función
       return a + b;
     }
     document.getElementById('fp').value=FParametros(4,3);
+//Funcion para el div
+// function fundiv() {
+//   document.getElementById('div').innerHTML=functionName();
+//
+// }
+//  fundiv();
+    // function loadImage() {
+    //     alert("Image is loaded");
+    // }
 
+//Funcion Global Scope
+    var msge = "Variable Global a la cual tiene alcance desde cualquier función.";
+    Gscope();
+    function Gscope() {
+        document.getElementById("sco").innerHTML =
+        "Global Scope: " + msge;
+    }
+//Función Local Scope
+    var num="Hola.";
+    function Scopes(){
+    var num=10;
+    document.getElementById('scl').innerHTML=("El valor del Scope local es: "+num);
+    }
+    document.getElementById('scg').innerHTML=("El valor del Scope global es: "+num);
+    Scopes();
+//Objeto simple
+function objsimple() {
+  var person = {firstName:"Liliana", lastName:"Sánchez", age:23, eyeColor:"brown"};
+  document.getElementById("ob").innerHTML =
+  person.firstName+' ' + person.lastName + " tiene " + person.age + " años.";
+}
+objsimple();
+//Objeto eliminado
+// Creamos un objeto con dos propiedades a y b
+function functionName() {
+  var obj = new Object;
+  obj.a = 5;
+  obj.b = 12;
+  // Elimina la propiedad a
+  delete obj.a;
+  document.getElementById('oeli').innerHTML=("a" in obj);
+}functionName();
 
-invoca();
+//Objeto creado
+var o1 = {b:7};
+var o2 = Object.create(o1); // 02 es un nuevo hijo de 01
+document.getElementById('obc').innerHTML=(Object.getPrototypeOf(o2) === o1); // true
+
+//Array de frutas
+function arreglo() {
+
+  var arr = [{'1':'Manzana'},{'2':'Sandia'},{'3':'Melon'},{'4':'Piña'}];
+  var paso = arr[1];
+  document.getElementById('arreglo').innerHTML=(JSON.stringify(arr));
+}
+arreglo() ;
+//Función para determinar el tipo de dato que contiene una variable
+function tipodaton() {
+  var num=12;
+  if (typeof num=='string') {
+    document.getElementById('tdnum').value=('es un string');
+  }else if (typeof num=='number') {
+    document.getElementById('tdnum').value=('es un número');
+  }
+}tipodaton();
+
+function tipodatos() {
+  var cad="Hola";
+  if (typeof cad=='string') {
+    document.getElementById('tdcad').value=('es un string');
+  }else if (typeof cad=='number') {
+    document.getElementById('tdcad').value=('es un número');
+  }
+}tipodatos();
+
 </script>
 </html>
